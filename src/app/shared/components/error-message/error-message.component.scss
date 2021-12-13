@@ -1,0 +1,40 @@
+@import 'variables.scss';
+
+.error{
+  width:80%;
+  background-color: $white;
+  padding:20px;
+  border:1px solid $error-grey;
+  border-left-width:5px;
+  border-radius: 3px;
+  margin:10px auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.danger{
+  border-left-color: $error-red;
+  background-color: $error-danger-bg;
+}
+
+.danger strong{
+  color:$error-red;
+}
+
+.info{
+  border-left-color: $primary-blue;
+  background-color: $error-info-bg;
+}
+
+.info strong{
+  color:$primary-blue;
+}
+
+.download-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  visibility: hidden;
+  cursor: pointer;
+}

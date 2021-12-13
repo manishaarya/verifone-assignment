@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+.favorites-list {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: $card-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

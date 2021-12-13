@@ -1,0 +1,56 @@
+<button class="btn" (click)="createCollection()">Create New collection</button>
+<div class="create-collection-container" *ngIf="isShowCollectionContainer">
+  <form
+    name="form"
+    (ngSubmit)="collectionForm.form.valid && onSubmit(collectionForm.value)"
+    #collectionForm="ngForm"
+    novalidate
+  >
+    <div class="cross-icon" (click)="closeCollectionContainer()">X</div>
+    <div class="form-group margin-bottom-xs">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        [(ngModel)]="model.title"
+        #title="ngModel"
+        [ngClass]="{ 'is-invalid': collectionForm.submitted && title.invalid }"
+        required
+      />
+      <div
+        *ngIf="collectionForm.submitted && title.invalid"
+        class="invalid-feedback"
+      >
+        <div *ngIf="title?.errors?.required" class="error-message">
+          Title is required
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          name="description"
+          [(ngModel)]="model.description"
+          #description="ngModel"
+          [ngClass]="{
+            'is-invalid': collectionForm.submitted && description.invalid
+          }"
+          required
+        />
+        <div
+          *ngIf="collectionForm.submitted && description.invalid"
+          class="invalid-feedback"
+        >
+          <div *ngIf="description?.errors?.required" class="error-message">
+            Description is required
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </div>
+  </form>
+</div>

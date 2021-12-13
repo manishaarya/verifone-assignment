@@ -1,0 +1,22 @@
+
+html,
+body,
+.main-container {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  margin: unset;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 2rem;
+}

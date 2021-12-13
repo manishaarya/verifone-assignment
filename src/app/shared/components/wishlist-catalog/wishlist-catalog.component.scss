@@ -1,0 +1,90 @@
+@import 'variables.scss';
+
+.wishlist-container {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: $wishlist-container-background;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.wishlist-card {
+  position: relative;
+  display: block;
+  background-color: $white;
+  width: 100%;
+  margin-top: 1.2rem;
+  box-shadow: 0 0.15rem 0 0 $primary-grey;
+  border-radius: .15rem;
+  border: 0.05rem solid $primary-grey;
+  border-color: $primary-grey;
+  border-width: 0.05rem;
+
+  .card-header {
+    border-bottom: 0.05rem solid $primary-grey;
+    border-bottom-color: $primary-grey;
+    border-bottom-width: .05rem;
+    color: #000;
+    font-weight: 200;
+    font-size: .9rem;
+    letter-spacing: normal;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .card-block {
+    border-bottom: 0.05rem solid $primary-grey;
+    border-bottom-color: $primary-grey;
+    border-bottom-width: 0.05rem;
+  }
+}
+
+.catalog-img {
+  width: 100%
+}
+
+.card-block,
+.card-footer,
+.card-header {
+  padding: 0.6rem 0.9rem;
+
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.main-text {
+  font-size: 2em;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+}
+
+.download-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.card:hover .download-container {
+  visibility: visible;
+  filter: unset;
+}
+
+
+.edit-container{
+  display: none;
+}
+
+.show-edit-container {
+  display: flex;
+}

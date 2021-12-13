@@ -1,0 +1,13 @@
+<div class="container" *ngIf="favoritesImageData">
+
+  <div class="content">
+    <header>
+      <h1>
+        Add to collection
+      </h1>
+    </header>
+    <app-add-collection (invokeMethod)="addCollection($event)"></app-add-collection>
+    <app-display-collection [favoritesList]="favoritesList$ | async" [imageId]="favoritesImageData.id" (invokeMethod)="addToExistingList($event)"></app-display-collection>
+    <div (click)="cancel()" class="cross-icon font-2">X</div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="cards" *ngIf="imageData">
+  <div class="cards-item" *ngFor="let image of imageData">
+    <div class="card relative-position">
+      <div class="card-image relative-position">
+        <img
+          class="catalog-img"
+          src="{{ image?.urls?.regular }}"
+          width="250"
+          height="200"
+        />
+        <div class="user-info-container">
+          <a href="{{ image?.user?.portfolio_url }}" target="_blank">
+            <img
+              src="{{ image?.user?.profile_image?.small }}"
+              class="img-container"
+              alt="profile image"
+            />
+          </a>
+          <span class="margin-left-xs text-container">
+            {{ image?.user?.username }}
+          </span>
+        </div>
+
+        <div class="wishlist-container">
+          <button
+            class="grey-btn"
+            title="Add to collection"
+            (click)="openModal(image)"
+          >
+            <img src="assets/heart-icon.png" width="20" height="20" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal
+  [showModal]="isShowModal"
+  *ngIf="isShowModal"
+  (close)="closeModal()"
+  [favoritesImageData]="favoritesImageData"
+></app-modal>

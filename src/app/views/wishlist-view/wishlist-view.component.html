@@ -1,0 +1,3 @@
+<app-wishlist-catalog [wishList]="wishList" (download)="download($event)"></app-wishlist-catalog>
+
+<app-error-message *ngIf="errorConfig" [errorConfig]="errorConfig"></app-error-message>

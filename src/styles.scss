@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-family: Metropolis, "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
+  color: rgb(118, 118, 118);
+}
+
+body {
+  margin:0;
+  padding:0;
+}

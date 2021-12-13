@@ -1,0 +1,16 @@
+@import 'variables.scss';
+
+.create-collection-container {
+  border: 2px dashed $light-grey;
+  color: $dark-grey;
+  padding: 26px 19px;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+  width: 100%;
+  background-color: $background-grey;
+  border-radius: 5px;
+  display: block;
+  height: auto;
+  margin: 1rem 0;
+  position: relative;
+}

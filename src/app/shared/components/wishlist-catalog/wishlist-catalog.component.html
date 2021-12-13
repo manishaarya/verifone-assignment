@@ -1,0 +1,115 @@
+<div class="wishlist-card" *ngFor="let item of wishlistCollectionList">
+  <div class="card-header">
+    <div class="title-wrapper">
+      <h1>Title:</h1>
+      <div
+        [ngClass]="item.isEdit?.title ? 'edit-container' : ''"
+        class="align-center margin-left-xs"
+      >
+        <div class="main-text">{{ item.title }}</div>
+        <img
+          src="assets/edit-icon.png"
+          alt="edit-icon"
+          width="20"
+          height="20"
+          class="margin-left-xs"
+          (click)="toggleContainer('title', true, item.title, item)"
+        />
+      </div>
+      <div
+        class="edit-container form-group margin-bottom-xs margin-left-xs d-flex"
+        [ngClass]="item.isEdit?.title ? 'show-edit-container' : ''"
+      >
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          [(ngModel)]="editInfo.title"
+        />
+        <button
+          class="btn"
+          type="button"
+          class="margin-clear"
+          (click)="editData('title', editInfo.title, item.id)"
+        >
+          Add
+        </button>
+        <button
+          class="btn"
+          type="button"
+          class="margin-clear"
+          (click)="toggleContainer('title', false, undefined, item)"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div class="title-wrapper">
+      <h4>Description:</h4>
+      <div class="align-center margin-left-xs" [ngClass]="item.isEdit?.description? 'edit-container': ''">
+        <div class="sub-text">{{ item.description }}</div>
+        <img
+          src="assets/edit-icon.png"
+          alt="edit-icon"
+          width="20"
+          height="20"
+          class="margin-left-xs"
+          (click)="toggleContainer('description', true, item.description, item)"
+        />
+      </div>
+      <div
+        class="edit-container form-group margin-bottom-xs margin-left-xs d-flex"
+        [ngClass]="item.isEdit?.description ? 'show-edit-container' : ''"
+      >
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          [(ngModel)]="editInfo.description"
+        />
+        <button
+          class="btn"
+          type="button"
+          class="margin-clear"
+          (click)="editData('description', editInfo.description, item.id)"
+        >
+          Add
+        </button>
+        <button
+          class="btn"
+          type="button"
+          class="margin-clear"
+          (click)="toggleContainer('description', false, undefined, item)"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-block">
+    <div class="cards">
+      <div class="cards-item" *ngFor="let image of item.imageList">
+        <div class="card relative-position">
+          <div class="card-image relative-position">
+            <img
+              width="250"
+              height="200"
+              class="catalog-img cursor-pointer"
+              src="{{ image?.urls?.regular }}"
+            />
+            <div class="download-container">
+              <button
+                class="grey-btn"
+                title="Add to collection"
+                (click)="downLoadImage(image.urls.regular)"
+              >
+                <img src="assets/download-icon.jpeg" width="20" height="20" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

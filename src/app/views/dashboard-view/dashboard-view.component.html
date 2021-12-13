@@ -1,0 +1,12 @@
+<div class="image-wrapper align-center">
+  <app-search
+    [placeholder]="'Search for Images'"
+    (onSearch)="fetchDataList($event)"
+  ></app-search>
+</div>
+
+<div class="content-wrapper">
+  <app-card-catalog [resultSet]="resultSet"></app-card-catalog>
+  <app-loader *ngIf="showLoader"></app-loader>
+  <app-error-message *ngIf="errorConfig" [errorConfig]="errorConfig"></app-error-message>
+</div>

@@ -1,0 +1,33 @@
+.d-flex {
+  display: flex;
+}
+
+.d-inline {
+  display: inline-block;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative-position {
+  position: relative;
+}
+
+body.no-scrolling {
+  overflow: hidden;
+}
+
+
+.cross-icon {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  top: 0;
+  cursor: pointer;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

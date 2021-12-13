@@ -1,0 +1,31 @@
+@import 'variables.scss';
+
+.searchbox-container input {
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px 0px rgb(0 0 0 / 10%), 0px 0px 6px 0px rgb(0 0 0 / 5%);
+  color: $search-container-text;
+  height: 50px;
+  margin: 0;
+  padding: 0 50px 0 10px;
+  box-sizing: border-box;
+  transition: all .3s;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding: 15px 10px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.searchbox-container {
+  position: relative;
+  width: 50rem;
+}

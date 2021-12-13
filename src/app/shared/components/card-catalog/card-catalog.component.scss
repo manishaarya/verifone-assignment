@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.user-info-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  visibility: hidden;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+}
+
+.wishlist-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.card:hover .user-info-container,
+.card:hover .wishlist-container {
+  visibility: visible;
+  filter: unset;
+}
+
+
+.img-container {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.text-container {
+  color: $white;
+}
