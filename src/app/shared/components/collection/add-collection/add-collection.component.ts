@@ -33,6 +33,7 @@ export class AddCollectionComponent implements OnInit {
     this.isShowCollectionContainer = false;
   }
 
+  // Reset all the form values
   public resetForm() {
     this.model = { title: '', description: '' };
   }

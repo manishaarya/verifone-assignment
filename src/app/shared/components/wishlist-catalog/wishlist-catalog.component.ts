@@ -32,6 +32,10 @@ export class WishlistCatalogComponent implements OnInit, OnChanges {
     }
   }
 
+  /*
+  This method hides and shows the edit container base on the filed where its is clicked. We are storing a flag isEdit on the main object
+  based on that we hide and show the container
+  */
   toggleContainer(field: string, show: boolean, val?: string, item?: IWishList) {
     if (item) {
       item['isEdit']= {}
@@ -53,7 +57,7 @@ export class WishlistCatalogComponent implements OnInit, OnChanges {
         break;
     }
   }
-
+  // This method will be called to invoke the store methods and update the store state
   editData(keyName: string, value: string, id: string,) {
     if (value) {
       this.store.dispatch(editProperty({ keyName, value, id }));

@@ -8,6 +8,9 @@ export const initialState: FavoritesCollectionState = {
 
 export const favoritesReducerHandler = createReducer(
   initialState,
+  /*
+  creates a new List and add the image to te ImageList array
+  */
   on(FavoriteCollectionActions.addFavoritesList,
     (state: FavoritesCollectionState, favorites: IWishList) => {
       const stateObj = JSON.parse(JSON.stringify(state));
@@ -17,6 +20,9 @@ export const favoritesReducerHandler = createReducer(
       return stateObj;
     }
   ),
+  /*
+  adds the image to the existing imageList array of a particular collection
+  */
   on(FavoriteCollectionActions.addToExistingList,
     (state: FavoritesCollectionState, val: IExistingCollectionState) => {
       const stateObj = JSON.parse(JSON.stringify(state));
@@ -26,6 +32,9 @@ export const favoritesReducerHandler = createReducer(
       return stateObj;
     }
   ),
+  /*
+  updates the properties of the object
+  */
   on(FavoriteCollectionActions.editProperty,
     (state: FavoritesCollectionState, val: IEditCollection) => {
       const stateObj = JSON.parse(JSON.stringify(state));
