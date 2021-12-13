@@ -29,7 +29,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Features Implementes
+## Features Implementation Details
 Dashboard Page
 - Search Functionality with Debounce. The results will be fetched live from unsplash API call. Till the time API fetched results a loader will be shown.
 - Responsive Catalog View on Search
